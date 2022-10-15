@@ -111,8 +111,9 @@ Reference
 Infrastructure as Code in a Private or Public Cloud
 https://www.hashicorp.com/blog/infrastructure-as-code-in-a-private-or-public-cloud
 
-###Non-Idempotent vs Idempotent ​
-Non-Idempotent​
+### Non-Idempotent vs Idempotent ​
+
+**Non-Idempotent​**
 
 When I deploy my IaC config file it will provision and launch 2 virtual machines​
 
@@ -124,7 +125,7 @@ We expect a state of 2​
 
 We end up with 4
 
-Idempotent​
+**Idempotent​**
 
 When I deploy my IaC config file it will provision and launch 2 virtual machines​
 
@@ -136,13 +137,14 @@ We expect a state of 2​
 
 We end up with 2​
 
-Reference
+**Reference**
 Infrastructure as Code: Principles, Patterns, and Practices
 https://shahadarsh.com/2020/07/12/principles-patterns-and-practices-for-effective-infrastructure-as-code/
 
 
-###Provisioning vs Deployment vs Orchestration​
-​Provisioning​
+### Provisioning vs Deployment vs Orchestration​
+
+**​Provisioning​**
 
 To prepare a server with systems, data, and software, and make it ready for network operation.​
 
@@ -150,13 +152,13 @@ Using Configuration Management tools like Puppet, Ansible, Chef, Bash scripts, P
 
 ​When you launch a cloud service and configure it you are “provisioning”​​
 
-​Deployment​​
+**​Deployment​​**
 
 Deployment is the act of delivering a version of your application to run a provisioned server.​
 
 Deployment could be performed via AWS CodePipline, Harness, Jenkins, Github Actions, CircleCI​
 
-​Orchestration​​
+**​Orchestration​​**
 
 Orchestration is the act of coordinating multiple systems or services.​
 
@@ -164,7 +166,7 @@ Orchestration is a common term when working with microservices, Containers, and 
 
 Orchestration could be Kubernetes, Salt, Fabric​
 
-Reference
+**Reference**
 What's Deployment versus Provisioning versus Orchestration?
 https://codefol.io/posts/deployment-versus-provisioning-versus-orchestration/
 
@@ -172,7 +174,8 @@ Self-service provisioning for cloud computing services
 https://en.wikipedia.org/wiki/Provisioning_(telecommunications)#Self-service_provisioning_for_cloud_computing_services
 
 
-###Configuration Drift​
+### Configuration Drift​
+
 Configuration Drift is when provisioned infrastructure has an unexpected configuration change due to:​
 
 team members manually adjusting configuration options​
@@ -182,7 +185,7 @@ eg. a junior developer turns on Delete on Termination for the production databas
 
 Configuration Drift going unnoticed could be a loss or breach of cloud services and residing data or result in interruption of services or unexpected downtime.​
 
-How to detect configuration drift?​
+**How to detect configuration drift?​**
 
 A compliance tool that can detect misconfiguration eg. AWS Config, Azure Policies, *GCP Security Health Analytics​
 Built-in support for drift detection eg. AWS CloudFormation Drift Detection​
@@ -199,7 +202,7 @@ Please use the alias command: terraform apply -refresh-only -auto-approve or ter
 
 https://www.terraform.io/cli/commands/refresh#usage
 
-How to prevent configuration drift?​
+**How to prevent configuration drift?​**
 
 Immutable infrastructure, always create and destroy, never reuse, Blue, Green deployment strategy.​
 Servers are never modified after they are deployed​
@@ -211,7 +214,8 @@ Reference
 Detecting and Managing Drift with Terraform
 https://www.hashicorp.com/blog/detecting-and-managing-drift-with-terraform
 
-Mutable vs Immutable Infrastructure​
+### Mutable vs Immutable Infrastructure​
+
 ​Mutable Infrastructure​
 
 Develop​ → Deploy → Configure
@@ -239,7 +243,7 @@ https://about.gitlab.com/topics/gitops/
 Automate Terraform with GitHub Actions
 https://learn.hashicorp.com/tutorials/terraform/github-actions
 
-###Immutable Infrastructure Guarantee​
+### Immutable Infrastructure Guarantee​
 Terraform encourages you towards an Immutable Infrastructure architect so you get the following guarantees.​
 
 Cloud Resource Failure – What if an EC2 instance fails a status check?​
@@ -264,7 +268,7 @@ Increased assurance of consistency, security​
 Speeds up your deployments​
 
 
-###HashiCorp​
+### HashiCorp​
 HashiCorp is a company specializing in managed open-source tools used to support the development and deployment of large-scale service-oriented software installations​
 
 What is HashiCorp Cloud Platform (HCP)?​
@@ -307,7 +311,7 @@ Vault​
 
 secrets management, identity-based access, encrypting application data, and auditing of secrets for applications, systems, and users​
 
-###What is Terraform?​
+### What is Terraform?​
 Terraform is an open-source and cloud-agnostic Infrastructure as Code (IaC) tool.​
 
 Terraform uses declarative configuration files. ​
@@ -327,7 +331,7 @@ Reference
 Infrastructure as Code
 
 
-###What is Terraform Cloud?​
+### What is Terraform Cloud?​
 Terraform Cloud is a Software as Service (SaaS) offering for:​
 
 Remote state storage​
@@ -371,7 +375,7 @@ Infrastructure as Code
 https://www.terraform.io/intro#infrastructure-as-code
 
 
-###Terraform Lifecycle​
+### Terraform Lifecycle​
 Code - Write or Update your Terraform configuration file​
 
 init​ - Initialize your project​. Pull latest providers and modules​
@@ -392,7 +396,7 @@ Waypoint​
 
 modern workflow to build, deploy, and release across platforms​
 
- ###Terraform Lifecycle​
+### Terraform Lifecycle​
 Code - Write or Update your Terraform configuration file​
 
 init​ - Initialize your project​. Pull latest providers and modules​
@@ -433,7 +437,7 @@ Reference
 Running Terraform in Automation
 https://learn.hashicorp.com/tutorials/terraform/automate-terraform
 
-###Terraform - Execution Plans​
+### Terraform - Execution Plans​
 An Execution Plan is a manual review of what will add, change or destroy before you apply changes eg. terraform apply​
 
 resources and configuration settings will be listed.​
@@ -444,7 +448,7 @@ or destroyed if this plan is approved:​
 
 A user must approve changes by typing: yes​
 
- ###Terraform – Visualizing Execution Plans​
+### Terraform – Visualizing Execution Plans​
  
 You can visualize an execution plan as a graph using the terraform graph command​
 
@@ -454,7 +458,7 @@ What is GraphViz?​
 
 open-source tools for drawing graphs specified in DOT language scripts having the file name extension "gv"​
 
-###Terraform – Resource Graph​
+### Terraform – Resource Graph​
 Terraform builds a dependency graph from the Terraform configurations, and walks this graph to generate plans, refresh state, and more. ​
 
 When you use terraform graph, this is a visual presentation of the dependency graph​
@@ -480,7 +484,7 @@ Resource Graph
 https://www.terraform.io/internals/graph
 
 
-###Terraform — Use Cases​
+### Terraform — Use Cases​
 IaC for Exotic Providers ​
 
 Terraform supports a variety of providers outside of GCP, AWS, Azure and sometimes is the only provider. ​
@@ -499,7 +503,7 @@ Reference
 Multi-Cloud Deployment
 https://www.terraform.io/intro/use-cases#multi-cloud-deployment
 
-###Terraform Core and Terraform Plugins​
+### Terraform Core and Terraform Plugins​
 Terraform is logically split into two main parts: ​
 
 Terraform Core​
@@ -536,7 +540,7 @@ Terraform is an online open-book about Terraform Best Practices​
 
 https://www.terraform-best-practices.com
 
- ###Github Repo for all Terraform labs:
+### Github Repo for all Terraform labs:
 https://github.com/ExamProCo/Terraform-Associate-Labs
 
 Note: To complete the lab and earn a star, please click on all checkboxes.
@@ -545,7 +549,7 @@ Note: To complete the lab and earn a star, please click on all checkboxes.
 
 https://learn.hashicorp.com/tutorials/terraform/install-cli
 
-###Terraform Provisioners​
+### Terraform Provisioners​
 Terraform Provisioners install software, edit files, and provision machines created with Terraform​
 
 Terraform allows you to work with two different provisioners:​
@@ -574,8 +578,466 @@ It is uncertain if this advice extends to Ansible. ​
 
 Terraform and Ansible has lots of learning materials on how their technologies complement each other.​
 
-Reference
-Provisioners
+Reference https://www.terraform.io/language/resources/provisioners/syntax
 
+### Local-exec​
+Local-exec allows you to execute local commands after a resource is provisioned.​
+
+The machine that is executing Terraform eg. terraform apply is where the command will execute.​
+
+A local environment could be…..​
+
+Local Machine​
+
+Your laptop/workstation​
+
+Build Server
+
+eg. GCP Cloud Build, AWS CodeBuild, Jenkins​
+
+Terraform Cloud Run Environment​
+
+single-use Linux virtual machine​
+
+Example Use Case​
+
+After you provision a VM you need to supply the Public IP to a third-party security service to add the VM IP address and you accomplish this by using locally installed third-party CLI on your build server.​
+
+Outputs vs Local-Exec​
+
+Terraform outputs allows you to output results after running Terraform apply​
+
+local exec allows you to run any arbitrary commands on your local machine. Commonly used to trigger Configuration Management eg. Ansible, Chef, Puppet​
+
+### Local-exec​
+command (required)​
+
+The command you want to execute​
+
+working_dir​
+
+Where the command will be executed​
+
+eg. /user/andrew/home/project​
+
+interpreter​
+
+The entry point for the command.​
+
+What local program will run the command eg. Bash, Ruby, AWS CLI, PowerShell​
+
+Environment​
+
+Key and value pair of environment variables​
+
+### Remote-exec​
+Remote-exec allows you to execute commands on a target resource after a resource is provisioned.​
+
+Local Machine executing Terraform​ → remote-exec → Provisioned VM (resource) executing provided commands/script​
+
+Remote-Exec is useful for provisioning a Virtual Machine with a simple set of commands.​
+
+For more complex tasks its recommended to use Cloud-Init, and strongly recommended in all cases to bake Golden Images via Packer or EC2 Image Builder​
+
+Reference
+Notice: Terraform to begin deprecation of vendor, tool-specific, provisioners starting in Terraform 0.13.4
+https://discuss.hashicorp.com/t/notice-terraform-to-begin-deprecation-of-vendor-tool-specific-provisioners-starting-in-terraform-0-13-4/13997
+
+### Remote-exec​  - Example
+
+Remote Command has three different modes:​
+
+Inline - list of command strings​
+
+Script - relative or absolute local script that will be copied to the remote resource and then executed​
+
+Scripts - relative or absolute local scripts that will be copied to the remote resource and then executed and executed in order.​
+
+You can only choose to use one mode at a time​
+
+### File​
+
+file provisioner is used to copy files or directories from our local machine to the newly created resource​
+
+Source – the local file we want to upload to the remote machine​​
+
+Content – a file or a folder​
+
+Destination – where you want to upload the file on the remote machine​
+
+You may require a connection block within the provisioner for authentication​
+
+### Connection​
+
+Connection block tells a provisioner or resource how to establish a connection​
+
+You can connect via SSH​
+
+With SSH you can connect through a Bastion Host eg:​
+
+bastion_host​
+bastionunderscorehost_key​
+bastion_port​
+bastion_user​
+bastion_password​
+bastionunderscoreprivate_key​
+bastion_certificate​
+You can connect via Windows Remote Management (winrm)​
+
+Reference
+Provisioner Connection Settings
+https://www.terraform.io/language/resources/provisioners/connection
+
+
+### Null Resources​
+null_resource is a placeholder for resources that have no specific association with a provider's resources.​
+
+You can provide a connection and triggers to a resource​
+
+Triggers is a map of values that should cause this set of provisioners to re-run. ​
+
+​Values are meant to be interpolated references to variables or attributes of other resources​
+
+Reference
+Provisioners Without a Resource
+https://www.terraform.io/language/resources/provisioners/null_resource
+
+### Terraform Providers​
+Providers are Terraform Plugins that allow you to interact with:​
+
+Cloud Service Providers (CSPs) eg. AWS, Azure, GCP​
+Software as a Service (SaaS) Providers eg. Github, Angolia, Stripe​
+Other APIs eg. Kubernetes, Postgres​
+Providers are required for your Terraform Configuration file to work.​
+
+Providers come in three tiers:​
+
+Official — Published by the company that owns the provider technology or service​
+Verified — actively maintained, up-to-date, and compatible with both Terraform and Provider​
+Community — published by a community member but no guarantee of maintenance, up-to-date, or compatibility ​
+Providers are distributed separately from Terraform and the plugins must be downloaded before use. ​
+
+terraform init will download the necessary provider plugins listed in a Terraform configuration file.​
+
+Reference
+Provider Configuration : https://www.terraform.io/language/providers/configuration
+
+Verified Modules :  https://www.terraform.io/registry/modules/verified
+
+### Terraform Registry​
+Terraform Registry is a website portal to browse, download or publish available Providers or Modules​
+
+https://registry.terraform.io​
+
+Provider​
+
+A provider is a plugin that is mapping to a Cloud Service Provider (CSPs) API.​
+
+Module
+
+A module is a group of configuration files that provide common configuration functionality.​
+
+Enforces best practices​
+reduce the amount of code​
+Reduce time to develop scripts​
+Everything published to Terraform Registry is public-facing​
+
+Reference
+Terraform Registry : https://registry.terraform.io/
+
+### Terraform Registry — Providers​
+You can easily find documentation and code samples for providers​
+
+You can easily grab the module code:​
+
+Lots of examples for common use cases​
+
+A list of dependent modules​
+
+### Terraform Registry
+
+An Introduction to Terraform Providers and Modules in the Terraform Community
+
+Terraform Cloud — Private Registry​
+Terraform Cloud allows you to publish private modules for your Organization within the Terraform Cloud Private Registry​
+
+When creating a module you need to connect to a Version Control System (VCS) and choose a repository​
+
+### Terraform Modules​
+A Terraform module is a group of configuration files that provide common configuration functionality.​
+
+Enforces best practices​
+Reduce the amount of code​
+Reduce time to develop scripts​
+AWS Provider (not a module)​
+
+If you had to create a VPC you would have specific many networking resources.​
+
+AWS VPC Module​
+
+Using a module you can use a shorthand Domain Specific Language (DSL)​ that will reduce the amount of work.​
+
+Modules: Imagine clicking a wizard that creates many cloud resources e.g. VPC Wizard​
+
+Azure VM via the Azure Provider​
+
+Azure VM via a Compute and Network Module​
+
+Reference
+Compute
+
+### Terraform Providers – The Fine Line​
+The Fine Line is understanding the granularities of responsibility between Terraform Infrastructure as Code and Third-Party Configuration Management. ​
+
+When you have a Postgres Database which is an atypical resource compared to a cloud service like an Amazon S3​
+
+Who should automate what?​
+
+A Terraform Provisioner could be using Ansible​
+
+Terraform
+
+providers
+
+Create a Postgres Databases
+module
+
+Create a Postgres User
+Provisioner
+
+Stage Seed Data
+Entities. If you want governance or asset resource management​
+
+A task is done one time to setup the database​
+
+Ansible (Third Party Configuration Management Tool)​
+
+Backup tables to Datawarehouse
+Truncate daily tables​
+Repeatable tasks for on-going maintenance​
+
+Reference
+Provider Configuration : https://www.terraform.io/language/providers/configuration
+
+### Terraform Language​
+Terraform files contain the configuration information about providers and resources.​
+
+Terraform files end in the extension of .tf or either .tf.json​
+
+Terraform files are written in the Terraform Language and is the extension of HCL​
+
+Terraform language consists of only a few basic elements:​
+
+Blocks — containers for other content, represent an object​
+block type — can have zero or more labels and a body​
+block label — name of a block​
+Arguments — assign a value to a name​
+They appear within blocks​
+Expressions — represent a value, either literally or by referencing and combining other values​
+They appear as values for arguments, or within other expressions.​
+You might come across HashiCorp Configuration Language (HCL) this is the low-level language​ for both the Terraform Language and alternative JSON syntax​
+
+Reference
+Terraform Language Documentation : https://www.terraform.io/language
+
+### Hashicorp Configuration Files — Alternate JSON Syntax​
+Terraform also supports an alternative syntax that is JSON-compatible​
+
+Terraform expects JSON syntax files to be named with .tf.json​
+
+This syntax is useful when generating portions of a configuration programmatically, since existing JSON libraries can be used to prepare the generated configuration files.​
+
+Example of JSON syntax​
+
+Reference
+JSON Configuration Syntax : https://www.terraform.io/language/syntax/json
+
+### Terraform Settings​
+The special terraform configuration block type eg. terraform { … } is used to configure some behaviors of Terraform itself​
+
+In Terraform settings we can specify:​
+
+required_version​
+The expected version of terraform​
+required_providers​
+The providers that will be pulled during a terraform init​
+​experiments​​
+Experimental language features, that the community can try and provide feedback​
+​provider_meta​​
+module-specific information for providers​
+Reference
+Terraform Settings : https://www.terraform.io/language/settings
+
+### HashiCorp Configuration Language​
+HCL is an open-source toolkit for creating structured configuration languages that are both human and machine friendly, for use with command-line tools​
+
+github.com/hashicorp/hcl​
+
+**HashiCorp Configuration Language (HCL)**
+
+Terraform Language (.tf)​ eg. Dynamic Blocks, For Each…​
+
+Packer Template (.pkr.hcl)​
+
+Vault Policies (no extension)​
+
+Boundary Controllers and Workers (.hcl)​
+
+Consul Configuration (.hcl)​
+
+Waypoint Application Configuration(.hcl)​
+
+Nomad Job Specifications (.nomad)​
+
+Shipyard Blueprint (.hcl)​
+
+Sentinel Policies ←​ Doesn’t use HCL but its own ACL custom language​
+
+Reference: HCL https://github.com/hashicorp/hcl
+
+### Input Variables​
+
+Input variables (aka variables or Terraform Variables) are parameters for Terraform modules
+
+You can declare variables in either:
+
+The root module
+The child modules
+Variables are defined via variable blocks.
+
+Default A default value which then makes the variable optional
+
+type This argument specifies what value types are accepted for the variable
+
+Description This specifies the input variable's documentation
+
+Validation A block to define validation rules, usually in addition to type constraints
+
+Sensitive Limits Terraform UI output when the variable is used in the configuration
+
+Reference
+Variables and Outputs : https://www.terraform.io/language/values
+
+What is the difference between variable.tf and variable.tfvars in Terraform? https://amazic.com/difference-between-variable-tf-and-variable-tfvars-in-terraform/
+
+### Variable Definitions Files
+A variable definitions file allows you to set the values for multiple variables at once.
+
+Variable definition files are named .tfvars or tfvars.json
+
+By default terraform.tfvars will be autoloaded when included in the root of your project directory
+
+Variable Definition Files use the Terraform Language.
+
+Reference
+
+Variables and Outputs https://www.terraform.io/language/values
+
+What is the difference between variable.tf and variable.tfvars in Terraform?
+https://amazic.com/difference-between-variable-tf-and-variable-tfvars-in-terraform/
+
+### Variables via Environment Variables
+A variable value can be defined by Environment Variables
+
+Variable starting with TF_ VAR _ name will be read and loaded
+
+Reference
+Environment Variables https://www.terraform.io/language/values/variables#environment-variables
+### Loading Input Variables
+Default Autoloaded Variables file
+
+terraform.tfvars
+
+When you create a named terraform.tfvars file it will be automatically loaded when running terraform apply
+Additional Variables Files (not autoloaded)
+
+my_variables.tfvars
+
+You can create additional variables files eg. dev.tfvars, prod.tfvars
+They will not be autoloaded (you’ll need to specific them in via command line)
+Additional Variables Files (autoloaded)
+
+my_variables.auto.tfvars
+
+If you name your file with auto.tfvars it will always be loaded
+Specify a Variables file via Command Line
+
+-var-file dev.tfvars
+
+You can specific variables inline via the command line for individual overrides
+Inline Variables via Command Line
+
+-var ec2_type=“t2.medium”
+
+You can specific variables inline via the command line for individual overrides
+Environment Variables
+
+TF_VAR _my _variable _name
+
+Terraform will watch for environment variables that begin with TF_VAR _ and apply those as variables
+Variable Definition Precedence
+You can override variables via many files and commands
+
+The definition precedence is the order in which Terraform will read variables and as it goes down the list it will override variables.
+
+Environment Variables
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars or *.auto.tfvars.json
+-var and -var-file
+
+### Output Values
+Output Values are computed values after a Terraform apply is performed. Outputs allow you:
+
+to obtain information after resource provisioning e.g. public IP address
+output a file of values for programmatic integration
+Cross-reference stacks via outputs in a state file via terraform_remote _state
+You can optionally provide a description
+
+You can mark the output as sensitive so it does not show in the output of your Terminal
+
+Sensitive outputs will still be visible within the state file.
+
+To print all the outputs for a state file use the terraform output
+
+Print a specific output with terraform output name
+
+Use the –json flag to get output as json data.
+
+Use the –raw flag to preserve quotes for strings
+
+### Local Values
+A local value (locals) assigns a name to an expression, so you can use it multiple times within a module without repeating it.
+
+Locals are set using the locals block ← Static value
+
+You can define multiple locals blocks ← computed values
+
+You can reference locals within locals
+
+Once a local value is declared, you can reference it in expressions as local.NAME.
+
+When you are referencing you use the singular “local”
+
+Locals help can help DRY up your code.
+
+It is best practice to use locals sparingly since Terraform is intended to be declarative and overuse of locals can make it difficult to determine what the code is doing.
+
+Reference
+Local Values https://www.terraform.io/language/values/locals
+
+### Data Sources
+Data sources allow Terraform to use information defined outside of Terraform, defined by another separate Terraform configuration, or modified by functions.
+
+You specify what kind of external resource you want to select
+
+You use filters to narrow down the selection
+
+You use data. to reference data sources
+
+Reference
+Data Sources
+
+Example Usage (remote Backend)
 
 
