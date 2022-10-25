@@ -1,11 +1,11 @@
 ### What is Infrastructure as Code?
 The Problem with Manual Configuration
 
-Manually Configuring your cloud infrastructure allows you to easily start using new service offerings to quickly prototype architectures however it comes with mant downsides:
+Manually Configuring your cloud infrastructure allows you to easily start using new service offerings to quickly prototype architectures however it comes with many downsides:
 
-Its easy to misconfigure a service through human error
-Its hard to manage the expected state of configuration for compliance
-Its hard to transfer configuration knowledge to other team members
+It's easy to misconfigure a service through human error
+It's hard to manage the expected state of configuration for compliance
+It's hard to transfer configuration knowledge to other team members
 Infrastructure as Code (IaC)
 
 You write a configuration script to automate creating, updating, or destroying cloud infrastructure.
